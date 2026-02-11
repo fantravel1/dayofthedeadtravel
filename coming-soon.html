@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proximamente — Coming Soon | Day of the Dead Travel</title>
+    <meta name="description" content="This page is coming soon. DayOfTheDeadTravel.com is building the most respectful, comprehensive Day of the Dead travel resource on the internet.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://dayofthedeadtravel.com/coming-soon">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-marigold: #E8890C;
+            --color-marigold-glow: #FFD700;
+            --color-purple-deep: #2D0A31;
+            --color-purple-dark: #4A0E4E;
+            --color-bone: #F5F0E8;
+            --color-cream: #FFF8F0;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-accent: 'Lora', Georgia, serif;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-purple-deep);
+            color: var(--color-bone);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(232, 137, 12, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(74, 14, 78, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(232, 137, 12, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Floating petals */
+        .petals {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .petal {
+            position: absolute;
+            color: var(--color-marigold);
+            opacity: 0.15;
+            animation: float linear infinite;
+        }
+
+        .p1 { font-size: 3rem; left: 5%; animation-duration: 18s; animation-delay: 0s; }
+        .p2 { font-size: 2rem; left: 15%; animation-duration: 22s; animation-delay: 3s; }
+        .p3 { font-size: 4rem; left: 30%; animation-duration: 15s; animation-delay: 1s; }
+        .p4 { font-size: 2.5rem; left: 45%; animation-duration: 20s; animation-delay: 5s; }
+        .p5 { font-size: 3.5rem; left: 60%; animation-duration: 17s; animation-delay: 2s; }
+        .p6 { font-size: 2rem; left: 75%; animation-duration: 21s; animation-delay: 4s; }
+        .p7 { font-size: 3rem; left: 90%; animation-duration: 16s; animation-delay: 6s; }
+        .p8 { font-size: 2.5rem; left: 50%; animation-duration: 19s; animation-delay: 7s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(-5vh) rotate(0deg) translateX(0);
+                opacity: 0;
+            }
+            10% { opacity: 0.15; }
+            50% { transform: translateY(50vh) rotate(180deg) translateX(30px); }
+            90% { opacity: 0.15; }
+            100% {
+                transform: translateY(105vh) rotate(360deg) translateX(-20px);
+                opacity: 0;
+            }
+        }
+
+        /* Main Content */
+        .coming-soon {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            max-width: 700px;
+        }
+
+        .cs-skull {
+            font-size: 3rem;
+            color: var(--color-marigold);
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .cs-divider {
+            font-size: 1.2rem;
+            letter-spacing: 0.5rem;
+            color: var(--color-marigold);
+            opacity: 0.4;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--color-bone);
+            margin-bottom: 0.5rem;
+            line-height: 1.15;
+        }
+
+        .cs-title span {
+            color: var(--color-marigold);
+        }
+
+        .cs-subtitle {
+            font-family: var(--font-accent);
+            font-size: 1.2rem;
+            color: var(--color-marigold-glow);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .cs-page-name {
+            display: inline-block;
+            background: rgba(232, 137, 12, 0.15);
+            border: 1px solid rgba(232, 137, 12, 0.3);
+            border-radius: 8px;
+            padding: 0.5rem 1.25rem;
+            font-size: 0.85rem;
+            color: var(--color-marigold-glow);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+
+        .cs-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(245, 240, 232, 0.7);
+            margin-bottom: 2.5rem;
+        }
+
+        .cs-text strong {
+            color: var(--color-bone);
+        }
+
+        .cs-text em {
+            color: var(--color-marigold);
+        }
+
+        .cs-home-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-marigold), #C46E08);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-home-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(232, 137, 12, 0.3);
+        }
+
+        .cs-footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: rgba(245, 240, 232, 0.35);
+        }
+
+        .cs-footer a {
+            color: rgba(232, 137, 12, 0.5);
+            text-decoration: none;
+        }
+
+        .cs-footer a:hover {
+            color: var(--color-marigold);
+        }
+
+        .cs-flowers {
+            letter-spacing: 0.5rem;
+            color: rgba(232, 137, 12, 0.2);
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .cs-title {
+                font-size: 3.5rem;
+            }
+
+            .cs-subtitle {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 374px) {
+            html {
+                font-size: 14px;
+            }
+
+            .cs-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .petal,
+            .cs-skull {
+                animation: none;
+            }
+            .petal {
+                display: none;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background: var(--color-cream);
+                color: var(--color-purple-deep);
+            }
+
+            body::before {
+                background:
+                    radial-gradient(circle at 20% 50%, rgba(232, 137, 12, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(74, 14, 78, 0.05) 0%, transparent 50%);
+            }
+
+            .cs-title {
+                color: var(--color-purple-deep);
+            }
+
+            .cs-subtitle {
+                color: var(--color-marigold);
+            }
+
+            .cs-text {
+                color: rgba(45, 10, 49, 0.7);
+            }
+
+            .cs-text strong {
+                color: var(--color-purple-deep);
+            }
+
+            .cs-footer {
+                color: rgba(45, 10, 49, 0.35);
+            }
+
+            .petal {
+                opacity: 0.1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Petals -->
+    <div class="petals" aria-hidden="true">
+        <span class="petal p1">&#10047;</span>
+        <span class="petal p2">&#9760;</span>
+        <span class="petal p3">&#10047;</span>
+        <span class="petal p4">&#10047;</span>
+        <span class="petal p5">&#9760;</span>
+        <span class="petal p6">&#10047;</span>
+        <span class="petal p7">&#10047;</span>
+        <span class="petal p8">&#9760;</span>
+    </div>
+
+    <main class="coming-soon">
+        <span class="cs-skull" aria-hidden="true">&#9760;</span>
+        <div class="cs-divider" aria-hidden="true">&#10047; &#9760; &#10047;</div>
+
+        <h1 class="cs-title"><span>Proximamente</span><br>Coming Soon</h1>
+        <p class="cs-subtitle">Esta pagina esta en camino</p>
+
+        <div class="cs-page-name" id="page-label"></div>
+
+        <p class="cs-text">
+            We are building this page with the same <strong>care, reverence, and cultural integrity</strong> that Day of the Dead deserves. Every word, every guide, every recommendation is crafted with respect for the traditions, the families, and the ancestors being honored.
+        </p>
+        <p class="cs-text">
+            <em>"La paciencia es una flor que no crece en todos los jardines."</em><br>
+            Patience is a flower that does not grow in every garden.
+        </p>
+
+        <a href="/" class="cs-home-link">Volver al Inicio &larr;</a>
+
+        <footer class="cs-footer">
+            <p>&copy; 2026 <a href="/">DayOfTheDeadTravel.com</a></p>
+            <p>Travel for remembrance &mdash; not spectacle.</p>
+            <p class="cs-flowers" aria-hidden="true">&#10047; &#9760; &#10047; &#9760; &#10047;</p>
+        </footer>
+    </main>
+
+    <script>
+        (function () {
+            // Parse page name from URL parameters
+            var params = new URLSearchParams(window.location.search);
+            var page = params.get('page');
+            var label = document.getElementById('page-label');
+
+            var pageNames = {
+                'start-here': 'Comienza Aqui — Start Here',
+                'not-halloween': 'Esto No Es Halloween',
+                'regions': 'Regiones de Mexico',
+                'oaxaca': 'Oaxaca — Altares & Comparsas',
+                'michoacan': 'Michoacan — Patzcuaro & Janitzio',
+                'mexico-city': 'Ciudad de Mexico — CDMX',
+                'puebla': 'Puebla — Ofrendas del Hogar',
+                'yucatan': 'Yucatan — Hanal Pixan',
+                'altars': 'Ofrendas — Altar Meanings',
+                'etiquette': 'Guia de Etiqueta',
+                'cemeteries': 'Etiqueta del Panteon',
+                'photography': 'Guia de Fotografia',
+                'calendar': 'Calendario de Dia de Muertos',
+                'calendar-2026': 'Calendario 2026',
+                'calendar-2027': 'Calendario 2027',
+                'calendar-2028': 'Calendario 2028',
+                'itineraries': 'Itinerarios de Viaje',
+                'itinerary-3-day': 'Itinerario de 3 Dias',
+                'itinerary-5-day': 'Itinerario de 5 Dias',
+                'itinerary-7-day': 'Itinerario de 7 Dias',
+                'food': 'Tradiciones Culinarias',
+                'diaspora': 'Dia de Muertos en la Diaspora',
+                'faq': 'Preguntas Frecuentes',
+                'about': 'Sobre Nosotros',
+                'contributors': 'Nuestros Colaboradores',
+                'legal': 'Aviso Legal',
+                'contact': 'Contacto',
+                'newsletter': 'Boletin Informativo',
+                'rituals': 'Rituales y Ceremonias',
+                'families': 'Dia de Muertos en Familia'
+            };
+
+            if (page && label) {
+                var name = pageNames[page] || page.replace(/-/g, ' ');
+                label.textContent = name;
+                // Update the page title too
+                document.title = name + ' — Proximamente | Day of the Dead Travel';
+            } else if (label) {
+                label.style.display = 'none';
+            }
+        })();
+    </script>
+</body>
+</html>
