@@ -109,7 +109,14 @@
             '.ft-feature',
             '.nh-content',
             '.diaspora-content',
-            '.altars-showcase'
+            '.altars-showcase',
+            '.info-card',
+            '.timeline-item',
+            '.highlight-box',
+            '.value-card',
+            '.quick-facts',
+            '.two-col',
+            '.faq-category'
         ];
 
         revealSelectors.forEach(function (selector) {
